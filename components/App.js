@@ -52,7 +52,7 @@ gisRequest: function(searchingText) {
 
 getGif: function(searchingText, callback){
     this.gisRequest(searchingText)
-    .then(gif => console.log('Contents: ' + gif))
+    .then(response => console.log('Contents: ' + response))
     .catch(error => console.error('Something went wrong', reason));
 },
 
