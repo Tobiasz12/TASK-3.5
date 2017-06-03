@@ -1,0 +1,19 @@
+{
+  "name": "tobiasz",
+  "version": "1.0.0",
+  "description": "''\u001b[Dtask 2.8",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel script.js --out-file script-compiled.js",
+    "start": "http-server"
+  },
+  "author": "tobi",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-latest": "^6.24.1",
+    "http-server": "^0.10.0"
+  }
+}
