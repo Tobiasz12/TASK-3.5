@@ -50,15 +50,14 @@ gisRequest: function(searchingText) {
     });
 },
 
-getGif: funciton(searchingText, callback){
+getGif: function(searchingText, callback){
     this.gisRequest(searchingText)
     .then(gif => console.log('Contents: ' + gif))
     .catch(error => console.error('Something went wrong', reason));
 }
 
     render: function() {
-
-        var styles = {
+        const styles = {
             margin: '0 auto',
             textAlign: 'center',
             width: '90%'
