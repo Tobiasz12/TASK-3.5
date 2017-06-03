@@ -57,7 +57,6 @@ getGif: function(searchingText, callback){
 
     render: function() {
         const styles = {
-
             margin: '0 auto',
             textAlign: 'center',
             width: '90%'
