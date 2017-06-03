@@ -29,24 +29,23 @@ gisRequest: function(searchingText) {
     function(resolve,reject){
       const url = GIPHY_API_URL + '/v1/gifs/random?api_key=' + GIPHY_PUB_KEY + '&tag=' + searchingText;
       const xhr = new XMLHttpRequest();
-      xhr.open('GET', url);
       xhr.onload = function() {
         if (xhr.status === 200) {
             var data = JSON.parse(xhr.responseText).data;
               var gif = {
                   url: data.fixed_width_downsampled_url,
                   sourceUrl: data.url
-                  };
-        resolve(gif)
-
+              };
+              resolve(gif)
         } else {
             reject(new Error(xhr.statusText)); // Dostaliśmy odpowiedź, ale jest to np 404
         }
-        xhr.send();
-        };
-        xhr.onerror = function () {
-          reject(new Error(`XMLHttpRequest Error: ${this.statusText}`));
-        };
+      };
+      xhr.onerror = function () {
+        reject(new Error(`XMLHttpRequest Error: ${this.statusText}`));
+      };
+      xhr.open('GET', url);
+      xhr.send();
     });
 },
 
