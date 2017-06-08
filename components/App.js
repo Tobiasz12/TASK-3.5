@@ -45,14 +45,14 @@ gisRequest: function(searchingText) {
         reject(new Error(`XMLHttpRequest Error: ${this.statusText}`));
       };
       xhr.open('GET', url);
-      xhr.send();    
+      xhr.send();
     });
 },
 
 getGif: function(searchingText, callback){
     this.gisRequest(searchingText)
-    .then(response => console.log('Contents: ' + response))
-    .catch(error => console.error('Something went wrong', reason));
+    .then(response => callback(response))
+    .catch(error => console.error('Something went wrong', reason))
 },
 
     render: function() {
