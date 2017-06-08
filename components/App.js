@@ -45,7 +45,7 @@ gisRequest: function(searchingText) {
         reject(new Error(`XMLHttpRequest Error: ${this.statusText}`));
       };
       xhr.open('GET', url);
-      xhr.send();
+      xhr.send();    
     });
 },
 
@@ -57,6 +57,7 @@ getGif: function(searchingText, callback){
 
     render: function() {
         const styles = {
+
             margin: '0 auto',
             textAlign: 'center',
             width: '90%'
